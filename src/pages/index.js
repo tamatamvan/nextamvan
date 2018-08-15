@@ -8,6 +8,9 @@ const Index = () => (
       #homepage {
         padding: 3em;
         text-align: center;
+        h1, h2 {
+          font-style: italic;
+        }
       }
     `}</style>
   </div>
