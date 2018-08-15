@@ -1,0 +1,24 @@
+{
+  "name": "nextamvan",
+  "version": "1.0.0",
+  "description": "A simple boilerplate for next.js application",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamatamvan/nextamvan.git"
+  },
+  "keywords": [
+    "react",
+    "nextjs",
+    "boilerplate",
+    "ssr"
+  ],
+  "author": "Septian Adhi Tama <septian.a.tama@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tamatamvan/nextamvan/issues"
+  },
+  "homepage": "https://github.com/tamatamvan/nextamvan#readme"
+}
