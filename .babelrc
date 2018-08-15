@@ -1,5 +1,23 @@
 {
   "plugins": [
+    [
+      "module-resolver", {
+        "root": ["."],
+        "alias": {
+          "styles": "./src/styles",
+          "components": "./src/components",
+          "store": "./src/store",
+          "config": "./src/config",
+          "utils": "./src/utils"
+        },
+        "cwd": "babelrc"
+    }],
+    [
+      "wrap-in-js",
+      {
+        "extensions": ["css$", "scss$"]
+      }
+    ]
   ],
   "presets": [
     [
