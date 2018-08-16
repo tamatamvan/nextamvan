@@ -1,6 +1,8 @@
 import React from 'react'
 import App, { Container } from 'next/app'
 
+import bsstyle from '../styles/bs.scss'
+
 import Layout from '../components/Layout'
 
 export default class MyApp extends App {
@@ -19,6 +21,7 @@ export default class MyApp extends App {
         <Layout>
           <Component {...pageProps} />
         </Layout>
+        <style jsx global>{ bsstyle }</style>
       </Container>
     )
   }
