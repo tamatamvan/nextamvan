@@ -1,0 +1,14 @@
+{
+  "name": "nextamvan",
+  "short_name": "nextamvan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#2f2f2f",
+  "description": "Nextamvan - A simple boilerplate for next.js app",
+  "icons": [{
+    "src": "/src/static/images/NEXTAMVAN.png",
+    "sizes": "500x500",
+    "type": "image/png"
+  }]
+}
