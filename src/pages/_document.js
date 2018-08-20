@@ -8,9 +8,12 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <title>Nextamvan</title>
+          <meta name="charset" content="utf-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="manifest" content="/static/manifest.json"/>
         </Head>
         <body className="custom_class">
           <Main />
