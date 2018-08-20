@@ -5,7 +5,7 @@ const exampleInitialState = () => ({
 })
 
 // REDUCERS
-export const reducer = (state = { ...exampleInitialState() }, action) => {
+export default (state = { ...exampleInitialState() }, action) => {
   switch (action.type) {
     case actionTypes.TICK:
       return ({

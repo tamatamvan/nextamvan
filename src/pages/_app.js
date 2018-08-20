@@ -1,11 +1,14 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 import App, { Container } from 'next/app'
+import withRedux from 'next-redux-wrapper'
+import { initStore } from 'store'
 
-import mainStyle from '../styles/main.scss'
+import mainStyle from 'styles/main.scss'
 
-import Layout from '../components/Layout'
+import Layout from 'components/Layout'
 
-export default class MyApp extends App {
+export default withRedux(initStore)(class MyApp extends App {
   static async getInitialProps ({Component, ctx}) {
     return ({
       pageProps: (
@@ -15,14 +18,17 @@ export default class MyApp extends App {
   }
 
   render () {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps, store } = this.props
     return (
       <Container>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Provider store={store}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </Provider>
+        
         <style jsx global>{ mainStyle }</style>
       </Container>
     )
   }
-}
+})
