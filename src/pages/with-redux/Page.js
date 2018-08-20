@@ -3,11 +3,11 @@ import { connect } from 'react-redux'
 import Clock from './Clock'
 import AddCount from './AddCount'
 
-const WithReduxExamplePage = (({ title, linkTo, lastUpdate, light }) => {
+const WithReduxExamplePage = (({ clockCounter: { title, linkTo, lastUpdate, light } }) => {
   return (
     <div>
       <h1>{title}</h1>
-      <Clock lastUpdate={lastUpdate} light={light} />
+      <Clock lastUpdate={ lastUpdate } light={light} />
       <AddCount />
       <nav>
         <Link href={linkTo}><a>Back to Home</a></Link>
