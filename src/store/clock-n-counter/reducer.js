@@ -1,3 +1,5 @@
+import * as actionTypes from './actionTypes'
+
 const exampleInitialState = () => ({
   lastUpdate: 0,
   light: false,

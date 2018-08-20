@@ -1,3 +1,4 @@
+import * as actionTypes from './actionTypes'
 // ACTIONS
 export const serverRenderClock = (isServer) => dispatch => {
   return dispatch({ type: actionTypes.TICK, light: !isServer, ts: Date.now() })
