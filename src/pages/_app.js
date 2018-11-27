@@ -4,8 +4,6 @@ import App, { Container } from 'next/app'
 import withRedux from 'next-redux-wrapper'
 import { initStore } from 'store'
 
-import mainStyle from 'styles/main.scss'
-
 import Layout from 'components/Layout'
 
 export default withRedux(initStore)(class MyApp extends App {
@@ -16,7 +14,6 @@ export default withRedux(initStore)(class MyApp extends App {
       )
     })
   }
-
   render () {
     const { Component, pageProps, store } = this.props
     return (
@@ -26,8 +23,6 @@ export default withRedux(initStore)(class MyApp extends App {
             <Component {...pageProps} />
           </Layout>
         </Provider>
-        
-        <style jsx global>{ mainStyle }</style>
       </Container>
     )
   }
