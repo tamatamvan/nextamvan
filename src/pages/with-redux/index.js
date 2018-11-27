@@ -33,11 +33,9 @@ class Counter extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addCount: bindActionCreators(addCount, dispatch),
-    startClock: bindActionCreators(startClock, dispatch)
-  }
-}
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  addCount,
+  startClock
+}, dispatch)
 
 export default connect(null, mapDispatchToProps)(Counter)
