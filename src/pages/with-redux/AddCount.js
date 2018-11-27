@@ -24,12 +24,12 @@ class AddCount extends Component {
   }
 }
 
-const mapStateToProps = ({ count }) => ({ count })
+const mapStateToProps = (state) => ({ 
+  count: state.clockCounter.count
+})
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addCount: bindActionCreators(addCount, dispatch)
-  }
-}
+const mapDispatchToProps = (dispatch) => bindActionCreators({ 
+  addCount
+}, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddCount)
