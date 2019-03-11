@@ -1,4 +1,6 @@
 import React from 'react'
+import Head from 'next/head'
+
 import { bindActionCreators } from 'redux'
 import { startClock, addCount, serverRenderClock } from 'store/clock-n-counter/actions'
 import { connect } from 'react-redux'
@@ -23,6 +25,9 @@ class Counter extends React.Component {
   render () {
     return (
       <div className="container">
+        <Head>
+          <title>With Redux Example</title>
+        </Head>
         <div className="row">
           <div className="col d-flex justify-content-center">
             <Page title='Index Page' linkTo='/' />

@@ -1,5 +1,9 @@
+import Head from 'next/head'
 const Index = () => (
   <div id="homepage">
+    <Head>
+      <title>Nextamvan</title>
+    </Head>
     <img src="/static/images/Programmer-cat.jpg"
       alt="I want to change the world"
       className="img-fluid"
