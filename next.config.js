@@ -1,7 +1,9 @@
 const path = require('path')
 const glob = require('glob') 
+const withPlugins = require('next-compose-plugins')
+const optimizedImages = require('next-optimized-images')
 
-module.exports = {
+const nextConfig = {
   webpack: (config, { isServer }) => {
     config.module.rules.push(
       {
@@ -32,3 +34,9 @@ module.exports = {
     return config
   }
 }
+
+module.exports = withPlugins([
+  [optimizedImages, {
+    /* config for next-optimized-images */
+  }]
+], nextConfig)
